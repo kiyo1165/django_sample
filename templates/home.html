@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block titile %}ホーム{% endblock %}
+
+{% block content %}
+<h2>ホーム</h2>
+{% if user.is_authenticated %}
+ようこそ｛[ user.get_username]｝さん
+<p><a href="{% url 'logout' %}"></a>ログアウト</p>
+{% else %}
+<p><a href="{% url 'login' %}"></a>ログイン</p>
+{% endif %}
+{% endblock %}
