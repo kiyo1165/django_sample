@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap4',
     'accounts',
+    'accouns.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,8 @@ STATIC_URL = '/static/'
 #####################
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 ###################
